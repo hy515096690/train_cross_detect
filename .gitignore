@@ -214,10 +214,17 @@ __marimo__/
 *.bmp
 *.webp
 *.mp4
-*.avi
+*.avigit
 *.mov
 
 # 过滤权重
 *.pt
 *.pth
 
+# 过滤开发环境
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+.cursor
