@@ -1,0 +1,11 @@
+
+path: F:\datesets\train_cross_detect_dataset\train_detect_dataset
+train: images/train # train images (relative to 'path') 4 images
+val: images/val # val images (relative to 'path') 4 images
+test: # test images (optional)
+
+names:
+  0: locomotive
+  1: container
+  2: train
+

@@ -220,6 +220,7 @@ __marimo__/
 # 过滤权重
 *.pt
 *.pth
+*.csv
 
 # 过滤开发环境
 .idea/
@@ -228,3 +229,5 @@ __marimo__/
 .project
 .settings/
 .cursor
+
+/runs
