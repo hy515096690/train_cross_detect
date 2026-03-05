@@ -90,5 +90,5 @@ if __name__ == "__main__":
     #     print("示例: python video_player.py video.mp4")
     #     sys.exit(1)
 
-    video_path = r'./video/1.mp4'
+    video_path = r'../videos/4.mp4'
     play_video(video_path)
