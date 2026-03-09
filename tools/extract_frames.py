@@ -7,7 +7,7 @@ import cv2
 from pathlib import Path
 
 # 路径配置（相对于脚本所在目录）
-SCRIPT_DIR = Path(__file__).resolve().parent
+SCRIPT_DIR = Path(__file__).resolve().parent.parent
 VIDEOS_DIR = SCRIPT_DIR / "videos"
 FRAMES_DIR = SCRIPT_DIR / "frames"
 
@@ -62,7 +62,7 @@ def main() -> None:
         return
 
     total_saved = 0
-    for i in range(1, 7):
+    for i in range(1, 8):
         video_name = f"{i}.mp4"
         video_path = VIDEOS_DIR / video_name
         if not video_path.exists():

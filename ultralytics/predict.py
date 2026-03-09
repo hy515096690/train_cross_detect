@@ -276,7 +276,7 @@ def main():
         save=False,
         show=False,
         conf=0.60,
-        device="cuda:0",
+        # device="cuda:0",
         classes=[2],
     ):
         result = result[0] if isinstance(result, (list, tuple)) else result
