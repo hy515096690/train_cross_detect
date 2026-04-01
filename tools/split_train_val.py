@@ -89,7 +89,7 @@ def main():
     parser.add_argument(
         "root",
         nargs="?",
-        default=r"F:\datesets\train_cross_detect_dataset\train_detect_dataset",
+        default=r"F:\datesets\train_cross_detect_dataset2",
         help="数据集根路径（含 images/train、labels/train）",
     )
     parser.add_argument(

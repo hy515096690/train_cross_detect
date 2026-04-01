@@ -15,9 +15,9 @@ from ultralytics.data.augment import LetterBox
 from ultralytics.utils.plotting import Annotator, colors
 
 # 训练好的分割权重（请按实际最新 run 修改）
-WEIGHTS = Path(__file__).resolve().parent.parent / "runs" / "segment" / "train2" / "weights" / "best.pt"
+WEIGHTS = Path(__file__).resolve().parent.parent / "runs" / "segment" / "train4" / "weights" / "best.pt"
 # 待检测视频
-SOURCE = Path(__file__).resolve().parent.parent / "videos" / "1.mp4"
+SOURCE = Path(__file__).resolve().parent.parent / "videos" / "5.mp4"
 # 结果视频与可视化输出目录
 SAVE_DIR = Path(r"D:\PYTHON_PROJECT\train_cross_detect\pre_result")
 
@@ -28,7 +28,7 @@ TRAIN_CLS_ID = 2
 # 水平光流（像素/帧）超过此值判为 右移动，低于负值判为 左移动，否则 停止。
 # 调小 → 更敏感，轻微位移即判为移动；调大 → 更迟钝，只有明显位移才判为移动。
 # FLOW_THRESHOLD_PX = 0.2
-FLOW_THRESHOLD_PX = 0.1
+FLOW_THRESHOLD_PX = 0.05
 
 # 光流在 CPU 上计算时的最大宽度（降低分辨率以提速），若用 CUDA 则按原图
 FLOW_MAX_WIDTH_CPU = 320
@@ -46,7 +46,7 @@ FLOW_ITERATIONS = 2
 # 若要“轻微变动就判为移动”：可把 FLOW_THRESHOLD_PX 再调小（如 0.1），或把 FLOW_WINSIZE 调小（如 11）。
 
 # 每 N 帧才计算一次光流，中间帧复用上一段光流结果，可明显降低 CPU（光流在 CPU 上时有效）
-FLOW_EVERY_N_FRAMES = 1  # 设为 2 则每 2 帧算一次光流，CPU 约减半
+FLOW_EVERY_N_FRAMES = 15  # 设为 2 则每 2 帧算一次光流，CPU 约减半
 
 # 是否尝试使用 OpenCV CUDA 光流（需安装带 CUDA 的 OpenCV，如 opencv-contrib-python 且编译了 CUDA）
 _USE_CUDA_FLOW = getattr(cv2, "cuda", None) is not None
@@ -276,8 +276,8 @@ def main():
         save=False,
         show=False,
         conf=0.60,
-        # device="cuda:0",
-        classes=[2],
+        # device="cuda:1",
+        classes=[0,2],
     ):
         result = result[0] if isinstance(result, (list, tuple)) else result
         names = result.names or {}
