@@ -70,4 +70,4 @@ os.add_dll_directory(r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\
 C:\Program Files\NVIDIA\CUDNN\v9.18\bin\13.1\x64
 ```
 
-你好
+你好,我在远程测试
