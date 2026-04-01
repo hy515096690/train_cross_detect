@@ -69,4 +69,4 @@ os.add_dll_directory(r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.1\
 2、在系统环境变量-path中添加：
 C:\Program Files\NVIDIA\CUDNN\v9.18\bin\13.1\x64
 ```
-
+ceshi
